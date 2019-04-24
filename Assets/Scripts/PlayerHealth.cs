@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;
+    public int startingHealth = 1;
     public int currentHealth;
-    //public Slider healthSlider;
-    //public Image damageImage;
     //public AudioClip deathClip;
     public float flashSpeed = 5f;
-    public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+    public Color flashColour = new Color(1f, 0f, 0f, 0.5f);
+
+    bool damaged;
 
     void Awake()
     {
@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        /*if (damaged)
+        if (damaged)
         {
             damageImage.color = flashColour;
         }
@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
         }
         damaged = false;*/
     }
-    /*
+    
     public void TakeDamage(int amount)
     {
         damaged = true;
