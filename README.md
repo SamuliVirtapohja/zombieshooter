@@ -12,8 +12,8 @@ Pelissä on käytetty unityn asset storesta monia ilmaisia visuaalisia sekä aud
 Pelaaja sekä viholliset liikkuvat vektorien avulla jota käyttäen viholliset paikantavat pelaakjan ja lähtevät jahtaamaan tätä.
 Aseessa on muutamia partikkeleja kuvaamaan oikeaa ammuntaa.
 Suurin osa scripteistä on itse luotuja katsomalla netistä mallia.
-
-
+(Koitimme WebGL buildia mutta jokin menee buildin aikana pieleen ja zombit eivät enää voi kuolla(luultavasti liian isot tiedostot))
+Joten joudumme palauttamaan projektin pc buildina.
 
 - Samuli Virtapohja, TTV17S3, L4721, 15h,	Arvosanaehdotus: 3
 - Olli Rampanen, TTV17S3, L5158, 15h,		Arvosanaehdotus: 3
