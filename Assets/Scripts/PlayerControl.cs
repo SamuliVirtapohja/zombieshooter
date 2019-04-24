@@ -6,10 +6,13 @@ public class PlayerControl : MonoBehaviour
 {
     public bool gamePaused = false;
     public float speed = 4;
+
+    public AudioSource gunAudio;
     // Start is called before the first frame update
     void Start()
     {
         LockMouse();
+        gunAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class PlayerControl : MonoBehaviour
 
         GameObject barrelend = GameObject.FindGameObjectWithTag("Weapon");
         Debug.Log(Input.mousePosition);
+        gunAudio.Play();
     }
 
     void RotatePlayer() // rotate player according to maincamera
