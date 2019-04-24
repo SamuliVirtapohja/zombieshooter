@@ -1,10 +1,24 @@
 # zombieshooter
 TTOS0700 harjoitustyo
 
-- Samuli Virtapohja, TTV17S3, L4721
-- Olli Rampanen, TTV17S3, L5158
+Pelissä tarkoituksena on pysyä mahdollisimman pitkään hengissä hurjia balleriina zombeja vastaan.
+Pelissä sinulla oin aluksi 10 sekunttia aikaa tutustua ennen kuin ensimmäinen aalto hyökkää.
+Hyökkäys kestää 2 minuuttia jonka jälkeen sinulla on 30 sekunttia aikaa viimeistellä loputkin zombit ennen kuin aina suurempi aalto
+hyökkää.
 
-Shoot zombies to stay alive, 2 min of daylight to gather yourself up, 3 min to wreck havoc!
+
+
+Pelissä on käytetty unityn asset storesta monia ilmaisia visuaalisia sekä audio palasia(lista alhaalla).
+Pelaaja sekä viholliset liikkuvat vektorien avulla jota käyttäen viholliset paikantavat pelaakjan ja lähtevät jahtaamaan tätä.
+Aseessa on muutamia partikkeleja kuvaamaan oikeaa ammuntaa.
+Suurin osa scripteistä on itse luotuja katsomalla netistä mallia.
+
+
+
+- Samuli Virtapohja, TTV17S3, L4721, 15h,	Arvosanaehdotus: 3
+- Olli Rampanen, TTV17S3, L5158, 15h,		Arvosanaehdotus: 3
+
+
 
 # Imported Assets
 
