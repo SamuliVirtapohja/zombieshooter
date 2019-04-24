@@ -8,6 +8,7 @@ public class TimeCycle : MonoBehaviour
     public static int min;
     public static float sec;
     public static int cycle;
+    public static int wave = 0;
 
     Text text;
 
@@ -44,9 +45,16 @@ public class TimeCycle : MonoBehaviour
             min = 4;
             sec = 60;
             if (cycle == 1)
+            { 
                 cycle = 2;
-            else if (cycle == 2)
-                cycle = 1;
+                wave++;
+            }
+        else if (cycle == 2)
+        {
+            cycle = 1;
+            min = 0;
+            sec = 30;
+        }
         }
 
         if (cycle == 1)
@@ -55,7 +63,7 @@ public class TimeCycle : MonoBehaviour
         }
         else
         {
-            text.text = "Night remaining: " + min + ":" + sec;
+            text.text = "Night remaining: " + min + ":" + sec + "         Wave: " + wave;
         }
 
     }
