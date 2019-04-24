@@ -8,6 +8,7 @@ public class CameraControl : MonoBehaviour
 
     public float speedH = 2f;
     public float speedV = 2f;
+    public float xrot;
 
     private float yaw = 0f;
     private float pitch = 0f;
@@ -29,9 +30,15 @@ public class CameraControl : MonoBehaviour
         }
         else
         {
+            RotateCamera();
             Vector3 campos = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
             transform.position = campos;
-            RotateCamera();
+            xrot = player.transform.rotation.x;
+            if (xrot < -45)
+            {
+                xrot = -45;
+            }
+            
         }
     }
 
