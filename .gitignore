@@ -58,3 +58,4 @@ crashlytics-build.properties
 
 # Ignore imported assets that aren't used
 /[Aa]ssets/Imported Assets
+Library/assetDatabase3
