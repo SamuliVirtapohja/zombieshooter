@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    GameObject deadview;
+
+
     public int startingHealth = 1;
     public int currentHealth;
-    //public AudioClip deathClip;
+    public AudioClip deathClip;
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.5f);
 
     bool damaged;
     bool isDead;
 
+    AudioSource playerAudio;
+
     void Awake()
     {
-        //playerAudio = GetComponent<AudioSource>();
+        playerAudio = GetComponent<AudioSource>();
+        deadview = GameObject.FindGameObjectWithTag("Dead");
         
         currentHealth = startingHealth;
     }
@@ -35,12 +41,10 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth -= amount;
 
-
-        //playerAudio.Play();
-
         if (currentHealth <= 0 && !isDead)
         {
             Death();
+            deadview.SetActive(true);
         }
     }
 
@@ -53,8 +57,8 @@ public class PlayerHealth : MonoBehaviour
 
         //anim.SetTrigger("Die");
 
-        //playerAudio.clip = deathClip;
-        //playerAudio.Play();
+        playerAudio.clip = deathClip;
+        playerAudio.Play();
 
     }
     

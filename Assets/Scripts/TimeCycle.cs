@@ -5,15 +5,24 @@ using UnityEngine.UI;
 
 public class TimeCycle : MonoBehaviour
 {
+    GameObject[] spawnPoints;
+    GameObject player;
+    public GameObject zombieprefab;
+
+
     public static int min;
     public static float sec;
     public static int cycle;
     public static int wave = 0;
+    public int zombies = 10;
 
     Text text;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+
         InvokeRepeating("Time", 1f, 1f);
     }
 
@@ -42,12 +51,13 @@ public class TimeCycle : MonoBehaviour
         else if (min == 0 && sec <= 0)
         {
 
-            min = 4;
+            min = 1;
             sec = 60;
             if (cycle == 1)
             { 
                 cycle = 2;
                 wave++;
+                spawn();
             }
         else if (cycle == 2)
         {
@@ -68,5 +78,13 @@ public class TimeCycle : MonoBehaviour
 
     }
 
+    void spawn()
+    {
+        for(int zombieamount = 0;zombieamount < zombies; zombieamount++)
+        {
+            var number = Random.Range(0, spawnPoints.Length);
 
+            Instantiate(zombieprefab, spawnPoints[number].transform);
+        }
+    }
 }
