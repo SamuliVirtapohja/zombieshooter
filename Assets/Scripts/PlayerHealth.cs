@@ -11,11 +11,12 @@ public class PlayerHealth : MonoBehaviour
     public Color flashColour = new Color(1f, 0f, 0f, 0.5f);
 
     bool damaged;
+    bool isDead;
 
     void Awake()
     {
         //playerAudio = GetComponent<AudioSource>();
-        //playerControl = GetComponent<PlayerControl>();
+        
         currentHealth = startingHealth;
     }
 
@@ -23,13 +24,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (damaged)
         {
-            damageImage.color = flashColour;
+            //damageImage.color = flashColour;
         }
-        else
-        {
-            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-        }
-        damaged = false;*/
+        damaged = false;
     }
     
     public void TakeDamage(int amount)
@@ -38,7 +35,6 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth -= amount;
 
-        healthSlider.value = currentHealth;
 
         //playerAudio.Play();
 
@@ -47,22 +43,21 @@ public class PlayerHealth : MonoBehaviour
             Death();
         }
     }
-    */
-    /*
+
+
     void Death()
     {
         isDead = true;
 
-        playerControl.DisableEffects();
+
 
         //anim.SetTrigger("Die");
 
-        playerAudio.clip = deathClip;
+        //playerAudio.clip = deathClip;
         //playerAudio.Play();
 
-        playerControl.enabled = false;
     }
-    */
+    
 
 
 

@@ -59,7 +59,6 @@ public class TimeCycle : MonoBehaviour
         }
 
     }
-   
 
 
 }
