@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public float timeBetweenAttacks = 0.5f;
-    public int attackDamage = 10;
+    public int attackDamage = 1;
+    public int range = 1;
 
 
     //Animator anim;
@@ -45,27 +46,20 @@ public class EnemyAttack : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
-
-        if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
+        if(Vector3.Distance(transform.position, player.transform.position) < range)
         {
             Attack();
-        }
-
-        if (playerHealth.currentHealth <= 0)
-        {
-            //anim.SetTrigger("PlayerDead");
         }
     }
 
 
     void Attack()
     {
-        timer = 1f;
+        timer = 0.5f;
 
         if (playerHealth.currentHealth > 0)
         {
-            //playerHealth.TakeDamage(attackDamage);
+            playerHealth.TakeDamage(attackDamage);
         }
     }
 }
