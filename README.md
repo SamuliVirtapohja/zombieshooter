@@ -16,6 +16,7 @@ Shoot zombies to stay alive, 2 min of daylight to gather yourself up, 3 min to w
 - [Shed, Tools, Bridge and Fences](https://assetstore.unity.com/packages/3d/props/shed-tools-bridge-and-fences-104216)
 - [Crates And Barrels Pack Volume 1 - Free Version](https://assetstore.unity.com/packages/3d/props/exterior/crates-and-barrels-pack-volume-1-free-version-128829)
 - [Free Sound FX](https://assetstore.unity.com/packages/audio/sound-fx/free-sound-fx-31837)
+- [Fog of War Gun Sound FX Free](https://assetstore.unity.com/packages/audio/sound-fx/weapons/fog-of-war-gun-sound-fx-free-66100)
 
 # Tutorials
 
