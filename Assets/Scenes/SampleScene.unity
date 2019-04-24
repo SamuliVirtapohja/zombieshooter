@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 313782675}
   - component: {fileID: 313782674}
   - component: {fileID: 313782678}
+  - component: {fileID: 313782679}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -170,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gamePaused: 0
   speed: 4
+  gunAudio: {fileID: 0}
 --- !u!136 &313782676
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -212,6 +214,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 3, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &313782679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313782673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afefe09bb9d598548827403c962a1d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 1
+  currentHealth: 0
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: 0.5}
 --- !u!1001 &364326694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -730,6 +748,16 @@ PrefabInstance:
     - target: {fileID: 8816833856691046962, guid: 57ba4488c47cf01498a237b26e5edb70,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834799946109334535, guid: 57ba4488c47cf01498a237b26e5edb70,
+        type: 3}
+      propertyPath: range
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3834799946109334535, guid: 57ba4488c47cf01498a237b26e5edb70,
+        type: 3}
+      propertyPath: attackDamage
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
